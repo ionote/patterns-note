@@ -9,11 +9,11 @@
 
 ## 目录
 
-- [备忘录模式](docs/install.md)
+- [备忘录模式](docs/mementos.md)
 
 ## 学习资料
 
-- https://www.mongodb.com/docs/manual/
+
 
 ## 开源协议
 
