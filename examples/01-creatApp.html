@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">x: {{position.x}} <br />y: {{position.y}}</div>
+    <script type="module">
+      import {
+        createApp,
+        reactive,
+        onMounted,
+        onUnmounted,
+      } from "./node_modules/vue/dist/vue.esm-browser.prod.js";
+
+      function useMousePosition() {
+        const position = reactive({ x: 0, y: 0 });
+
+        function update(e) {
+          position.x = e.pageX;
+          position.y = e.pageY;
+        }
+
+        onMounted(() => {
+          window.addEventListener("mousemove", update);
+        });
+        onUnmounted(() => {
+          console.log("onUnmounted");
+          window.removeEventListener("mousemove", update);
+        });
+
+        return position;
+      }
+      
+      const app = createApp({
+        setup() {
+          console.log("aaa");
+          const position = useMousePosition();
+          return {
+            position,
+          };
+        },
+        mounted() {
+          this.position.x = 10;
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>
