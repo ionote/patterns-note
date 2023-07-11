@@ -9,6 +9,7 @@
 
 ## 目录
 
+- [原型模式](docs/prototype.md)
 - [备忘录模式](docs/mementos.md)
 
 ## 学习资料

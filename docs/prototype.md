@@ -53,8 +53,6 @@ a // {x: 1, y: 2}
 
 通过字面量 {} 设置的属性，描述符默认都是 true。而通过 Object.defineProperty 定义的属性，描述符默认都是 false。
 
-
-
 ### value
 
 - 用于定义属性值
@@ -186,6 +184,8 @@ Object.isSealed(a) // true
 Object.isFrozen(b) // false
 Object.isSealed(b) // true
 ```
+
+在 Vue data 中，如果有大对象不需要响应式，可以使用 freeze 冻结该对象。
 
 ### enumerable
 

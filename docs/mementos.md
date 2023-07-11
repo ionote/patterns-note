@@ -19,21 +19,8 @@
 ```js
 // 备忘类
 class Memento {
-  state = null
   constructor(state) {
-    this.state = state;
-  }
-
-  getState() {
-      return this.state;
-  }
-
-  setState(state) {
     this.state = this._copy(state);
-  }
-
-  _copy(state) {
-    return JSON.parse(JSON.stringify(state));
   }
 }
 
@@ -63,8 +50,7 @@ class CareTaker {
   }
 
   restore(i) {
-    const memento = this.mementos[i];
-    this.originator.memento = memento;
+    this.originator.memento = this.get(i);
   }
 
   // 从数据库取出记录
