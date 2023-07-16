@@ -9,6 +9,7 @@
 
 ## 目录
 
+- [面向对象和UML类图](docs/oop.md)
 - [原型模式](docs/prototype.md)
 - [备忘录模式](docs/mementos.md)
 

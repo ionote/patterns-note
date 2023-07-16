@@ -9,7 +9,7 @@ export default VueRouter.createRouter({
     },
     {
       path: "/c1",
-      name: '1.setup',
+      name: '1.oop',
       component: () => import("./views/c1/Index.vue"),
     },
   ],
