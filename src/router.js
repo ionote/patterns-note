@@ -5,12 +5,17 @@ export default VueRouter.createRouter({
   routes: [
     {
       path: "/",
-      component: () => import("./views/c1/Index.vue"),
+      redirect: "/c1",
     },
     {
       path: "/c1",
-      name: '1.oop',
+      name: "面向对象和UML类图",
       component: () => import("./views/c1/Index.vue"),
+    },
+    {
+      path: "/c7",
+      name: "迭代器模式",
+      component: () => import("./views/c7/Index.vue"),
     },
   ],
 });

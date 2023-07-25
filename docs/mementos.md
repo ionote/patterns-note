@@ -74,3 +74,9 @@ careTaker.create();
 careTaker.restore(1);
 console.log(originator.state) // { name: '张四' }
 ```
+
+## 备忘录模式的优缺点
+
+优点是为用户提供了一种可恢复的机制或者是一种历史记录机制，能够使用户能够方便的回到某个历史状态。
+
+缺点是消耗资源，如果需要保存的状态过多，会占用比较大的资源。
