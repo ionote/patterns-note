@@ -16,6 +16,7 @@
 - [备忘录模式](docs/mementos.md)
 - [迭代器模式](docs/iterator.md)
 - [观察者模式](docs/observer.md)
+- [发布订阅模式](docs/publish.md)
 
 ## 学习资料
 
