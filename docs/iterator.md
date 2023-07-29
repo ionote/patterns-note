@@ -110,6 +110,83 @@ for(let o of obj) {
 // baz
 ```
 
+## 迭代器的作用
+
+- 用于 for...of (对比 for...in)
+- 都支持数组的解构、扩展操作符、Array.from()方法
+- Promise.all() 和 Promise.race() 支持传入迭代器
+- yield*
+
+## Generator 生成器
+
+生成器返回的是一个迭代器，可以通过 next() 方法来遍历生成器的内部结构。
+
+它的语法是在 function 关键字后面加一个 * 号，函数体内部使用 yield 关键字来定义不同的状态。
+
+```js
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+const g = gen();
+console.log(g.next()); // { value: 1, done: false }
+console.log(g.next()); // { value: 2, done: false }
+console.log(g.next()); // { value: 3, done: false }
+console.log(g.next()); // { value: undefined, done: true }
+```
+
+```js
+function* gen() {
+  yield [1, 2, 3];
+}
+for (let o of gen()) {
+  console.log(o); // [ 1, 2, 3 ]
+}
+```
+
+```js
+class CustomGenerator {
+  constructor() {
+    this.data = [1, 2, 3]
+  }
+  *[Symbol.iterator]() {
+    for(let o of this.data) {
+      yield o
+    }
+  }
+}
+const c = new CustomGenerator()
+for(let o of c) {
+    console.log(o) 
+}
+// 1
+// 2
+// 3
+```
+
+**遍历 DOM 树**
+
+`yield*` 后面可以跟一个迭代器。
+
+```js
+function* traverse(elemList) {
+  for (const elem of elemList) {
+    yield elem;
+    if (elem.children.length > 0) {
+      yield* traverse(elem.children);
+    }
+  }
+}
+
+const elems = traverse(document.querySelectorAll(".list"));
+for (const elem of elems) {
+  console.log(elem);
+}
+```
+
+![](imgs/2023-07-29-21-31-46.png)
+
 ## 迭代器模式的优缺点
 
 优点是分离了集合对象的遍历行为，抽象出一个迭代器来负责，这样既可以做到不暴露集合的内部结构，又可以让外部代码透明地访问集合内部的数据。
