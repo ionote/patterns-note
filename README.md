@@ -17,6 +17,7 @@
 - [迭代器模式](docs/iterator.md)
 - [观察者模式](docs/observer.md)
 - [发布订阅模式](docs/publish.md)
+- [状态模式](docs/state.md)
 
 ## 学习资料
 
