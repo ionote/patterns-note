@@ -17,5 +17,10 @@ export default VueRouter.createRouter({
       name: "迭代器模式",
       component: () => import("./views/c7/Index.vue"),
     },
+    {
+      path: "/c8",
+      name: "装饰器模式",
+      component: () => import("./views/c8/Index.vue"),
+    },
   ],
 });

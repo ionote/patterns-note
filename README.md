@@ -9,15 +9,16 @@
 
 ## 目录
 
-- [面向对象和UML类图](docs/oop.md)
-- [工厂模式](docs/factory.md)
-- [单例模式](docs/singleton.md)
-- [原型模式](docs/prototype.md)
-- [备忘录模式](docs/mementos.md)
-- [迭代器模式](docs/iterator.md)
-- [观察者模式](docs/observer.md)
-- [发布订阅模式](docs/publish.md)
-- [状态模式](docs/state.md)
+- [x] [面向对象和UML类图](docs/oop.md)
+- [ ] [工厂模式](docs/factory.md)
+- [ ] [单例模式](docs/singleton.md)
+- [x] [原型模式](docs/prototype.md)
+- [x] [备忘录模式](docs/mementos.md)
+- [x] [迭代器模式](docs/iterator.md)
+- [x] [观察者模式](docs/observer.md)
+- [x] [发布订阅模式](docs/publish.md)
+- [x] [状态模式](docs/state.md)
+- [x] [策略模式](docs/strategy.md)
 
 ## 学习资料
 
