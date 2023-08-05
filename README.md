@@ -19,6 +19,7 @@
 - [x] [发布订阅模式](docs/publish.md)
 - [x] [状态模式](docs/state.md)
 - [x] [策略模式](docs/strategy.md)
+- [x] [命令模式](docs/command.md)
 
 ## 学习资料
 
